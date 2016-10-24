@@ -40,6 +40,8 @@ public class TestOrder {
 
 	@Test
 	public void testScenario1() {
+		System.out.println("Test - Scenario 1");
+		
 		Order order = new Order();
 		
 		// Team needs: Total of 50 meals including 5 vegetarians and 7 gluten free.
@@ -94,6 +96,8 @@ public class TestOrder {
 
 	@Test
 	public void testScenario2() {
+		System.out.println("Test - Scenario 2");
+		
 		Order order = new Order();
 		
 		// Team needs: Total of 50 meals including 5 vegetarians and 5 gluten free and 5 fish free.
