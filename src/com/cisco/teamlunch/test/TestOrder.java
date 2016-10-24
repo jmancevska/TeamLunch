@@ -66,6 +66,8 @@ public class TestOrder {
 		order.addRestaurant(a);
 		order.addRestaurant(b);
 		
+		System.out.println(order);
+		
 		Hashtable<String, Restaurant> restaurantMatch = order.findBestMatch();
 		
 	    Set<String> keys = restaurantMatch.keySet();
@@ -76,6 +78,7 @@ public class TestOrder {
 	    // Restaurant A (4 vegetarian + 36 others), 
 	    // Restaurant B (1 vegetarian + 7 gluten free + 2 others)
 
+	    System.out.println("Result: ");
 	    while (itr.hasNext()) { 
 	       String restaurantName = itr.next();
 	       Restaurant aRestaurant = restaurantMatch.get(restaurantName);
@@ -130,6 +133,8 @@ public class TestOrder {
 		order.addRestaurant(b);
 		order.addRestaurant(c);
 		
+		System.out.println(order);
+		
 		Hashtable<String, Restaurant> restaurantMatch = order.findBestMatch();
 		
 	    Set<String> keys = restaurantMatch.keySet();
@@ -141,6 +146,7 @@ public class TestOrder {
 	    // Restaurant B (1 vegetarian + 5 gluten free + 9 others)
 	    // Restaurant C (1 vegetarian + 7 gluten free + 2 others)
 
+	    System.out.println("Result: ");
 	    while (itr.hasNext()) { 
 	       String restaurantName = itr.next();
 	       Restaurant aRestaurant = restaurantMatch.get(restaurantName);
