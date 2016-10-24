@@ -50,6 +50,15 @@ public class FoodType {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "FoodType [Description=" + getDescription()
+				+ ", Quantity=" + getQuantity() + "]";
+	}
 	
 	
 

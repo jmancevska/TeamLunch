@@ -119,4 +119,15 @@ public class Order {
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Order \n " 
+				+ "[foodSelection=" + foodSelection + "\n"
+				+ ", availableRestaurants=" + availableRestaurants + "]";
+	}
+
+	
 }
