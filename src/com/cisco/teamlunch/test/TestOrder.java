@@ -144,7 +144,7 @@ public class TestOrder {
 	    // Expected meal orders: 
 	    // Restaurant A (4 vegetarian + 26 others), 
 	    // Restaurant B (1 vegetarian + 5 gluten free + 9 others)
-	    // Restaurant C (1 vegetarian + 7 gluten free + 2 others)
+	    // Restaurant C (5 fish free)
 
 	    System.out.println("Result: ");
 	    while (itr.hasNext()) { 
