@@ -18,7 +18,6 @@ public class Restaurant implements Comparable<Restaurant> {
 	
 	private String name;
 	private int rating;
-	private int totalNumOfMeals = 0;
 	// Using Hashtable so that there is no duplication of FoodTypes in the collection
 	private Hashtable<String, FoodType> foodTypes = new Hashtable<String, FoodType>();
 	
@@ -64,6 +63,17 @@ public class Restaurant implements Comparable<Restaurant> {
 	 * @return the totalNumOfMeals
 	 */
 	public int getTotalNumOfMeals() {
+		int totalNumOfMeals = 0;
+	    Set<String> keys = foodTypes.keySet();
+	    
+	    Iterator<String> itr = keys.iterator();
+	 
+	    while (itr.hasNext()) { 
+	       String key = itr.next();
+	       FoodType aFoodType = foodTypes.get(key);
+	       totalNumOfMeals = totalNumOfMeals + aFoodType.getQuantity();
+	    }
+
 		return totalNumOfMeals;
 	}
 
@@ -74,7 +84,6 @@ public class Restaurant implements Comparable<Restaurant> {
 	 */
 	public void addFoodTypes(FoodType aFoodType) {
 		foodTypes.put(aFoodType.getDescription(), aFoodType);
-		totalNumOfMeals = totalNumOfMeals + aFoodType.getQuantity();
 	}
 
 	/**
